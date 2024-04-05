@@ -51,7 +51,7 @@ const Navbar = () => {
             </button>
              
         </div>
-       <CloseOutlinedIcon onClick={removeBanner} />
+       <CloseOutlinedIcon onClick={removeBanner} className="cursor-pointer"/>
       </div>
       </>}
       
