@@ -11,9 +11,9 @@ const Navbar = () => {
   const [showIcon, setShowIcon] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [showBanner, setShowBanner] = useState(true);
-  const removeBanner=() => {
-    setShowBanner(false)
-  }
+  const removeBanner = () => {
+    setShowBanner(false);
+  };
   useEffect(() => {
     const handleResize = () => {
       setWidth(window.innerWidth);
@@ -32,29 +32,32 @@ const Navbar = () => {
   return (
     <div>
       {/*Banner Section */}
-      {showBanner && <>
-      <div className="flex flex-col sm:flex-row items-center gap-3 md:pl-7 bg-yellow-200 py-3">
-        <div className="flex items-center gap-2 bg-yellow-500 py-1 px-3 rounded-2xl text-sm font-medium">
-          <AccessTimeIcon fontSize="small" />
-          <h2>One-Time Offer</h2>
-        </div>
-        <div className="px-1 text-[0.94rem]">
-          <h2 className="font-medium text-center sm:text-left sm:mt-0">
-            Your AI Storyboarding Bundle Discount expires in{" "}
-            <span className="bg-text-pink-400">5:01</span>
-          </h2>
-        </div>
+      {showBanner && (
+        <>
+          <div className="flex flex-col sm:flex-row items-center gap-3 md:pl-7 bg-yellow-200 py-3">
+            <div className="flex items-center gap-2 bg-yellow-500 py-1 px-3 rounded-2xl text-sm font-medium">
+              <AccessTimeIcon fontSize="small" />
+              <h2>One-Time Offer</h2>
+            </div>
+            <div className="px-1 text-[0.94rem]">
+              <h2 className="font-medium text-center sm:text-left sm:mt-0">
+                Your AI Storyboarding Bundle Discount expires in{" "}
+                <span className="bg-text-pink-400">5:01</span>
+              </h2>
+            </div>
 
-        <div className="text-center sm:text-right">
-          <button className="font-medium bg-[#F79AC0] py-[0.25rem] px-4 rounded-md">
-            Claim Discount
-            </button>
-             
-        </div>
-       <CloseOutlinedIcon onClick={removeBanner} className="cursor-pointer"/>
-      </div>
-      </>}
-      
+            <div className="text-center sm:text-right">
+              <button className="font-medium bg-[#F79AC0] py-[0.25rem] px-4 rounded-md">
+                Claim Discount
+              </button>
+            </div>
+            <CloseOutlinedIcon
+              onClick={removeBanner}
+              className="cursor-pointer"
+            />
+          </div>
+        </>
+      )}
 
       {/*This is the Navbar section */}
       <div className="flex justify-between items-center py-6 bg-white px-3 md:px-0">
@@ -82,7 +85,7 @@ const Navbar = () => {
                 <input
                   type="text"
                   className=" w-36 md:w-80 px-4 py-1 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300"
-                  placeholder="Enter some text"
+                  placeholder="Search my Storyboards"
                 />
               </>
             )}

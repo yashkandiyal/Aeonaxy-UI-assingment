@@ -1,14 +1,16 @@
-import React from 'react'
+import React from "react";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 
-const Modal = ({show,setShow,toggleHandler,isToggled}) => {
+const Modal = ({ show, setShow, toggleHandler, isToggled }) => {
   return (
     <div>
       {show && (
         <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 ">
           <div className="bg-white px-6  pb-8 rounded-lg md:w-full max-w-md">
             <div className="flex justify-between  items-center">
-              <h1 className="font-semibold text-2xl md:text-3xl my-8 ">New Storyboard</h1>
+              <h1 className="font-semibold text-2xl md:text-3xl my-8 ">
+                New Storyboard
+              </h1>
               <div
                 className="p-1 bg-slate-100 rounded-full"
                 onClick={() => setShow(false)}>
@@ -61,6 +63,6 @@ const Modal = ({show,setShow,toggleHandler,isToggled}) => {
       )}
     </div>
   );
-}
+};
 
-export default Modal
+export default Modal;

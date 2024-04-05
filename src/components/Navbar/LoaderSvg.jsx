@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const LoaderSvg = () => {
   return (
@@ -21,6 +21,6 @@ const LoaderSvg = () => {
       </svg>
     </div>
   );
-}
+};
 
-export default LoaderSvg
+export default LoaderSvg;

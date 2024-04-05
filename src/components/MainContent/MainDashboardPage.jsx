@@ -20,7 +20,9 @@ const MainDashboardPage = () => {
             <h1 className="text-xl font-bold text-black">A</h1>
           </div>
 
-          <h1 className=" text-medium md:text-2xl font-bold">Adam Cooper Team</h1>
+          <h1 className=" text-medium md:text-2xl font-bold">
+            Adam Cooper Team
+          </h1>
         </div>
         <div id="right">
           <button
