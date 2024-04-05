@@ -1,7 +1,4 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.custom-thickness {
-    background-color: aqua;
-  font-weight: bold; /* Increase the font weight */
-}
+

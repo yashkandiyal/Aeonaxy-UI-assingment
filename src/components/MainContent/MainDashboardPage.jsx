@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import ImageContainer from "./ImageContainer";
-import { Avatar } from "@nextui-org/react";
 import ModeCommentIcon from "@mui/icons-material/ModeComment";
 import Modal from "./Modal";
 const MainDashboardPage = () => {

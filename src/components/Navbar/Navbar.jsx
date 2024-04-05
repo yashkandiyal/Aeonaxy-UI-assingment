@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import BoltOutlinedIcon from "@mui/icons-material/BoltOutlined";
 import SearchIcon from "@mui/icons-material/Search";
 import LoaderSvg from "./LoaderSvg";
 import SearchModal from "./SearchModal";
-import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
+import TopBanner from "./TopBanner";
 
 const Navbar = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -32,32 +31,7 @@ const Navbar = () => {
   return (
     <div>
       {/*Banner Section */}
-      {showBanner && (
-        <>
-          <div className="flex flex-col sm:flex-row items-center gap-3 md:pl-7 bg-yellow-200 py-3">
-            <div className="flex items-center gap-2 bg-yellow-500 py-1 px-3 rounded-2xl text-sm font-medium">
-              <AccessTimeIcon fontSize="small" />
-              <h2>One-Time Offer</h2>
-            </div>
-            <div className="px-1 text-[0.94rem]">
-              <h2 className="font-medium text-center sm:text-left sm:mt-0">
-                Your AI Storyboarding Bundle Discount expires in{" "}
-                <span className="bg-text-pink-400">5:01</span>
-              </h2>
-            </div>
-
-            <div className="text-center sm:text-right">
-              <button className="font-medium bg-[#F79AC0] py-[0.25rem] px-4 rounded-md">
-                Claim Discount
-              </button>
-            </div>
-            <CloseOutlinedIcon
-              onClick={removeBanner}
-              className="cursor-pointer"
-            />
-          </div>
-        </>
-      )}
+      <TopBanner removeBanner={removeBanner} showBanner={showBanner} />
 
       {/*This is the Navbar section */}
       <div className="flex justify-between items-center py-6 bg-white px-3 md:px-0">
@@ -67,7 +41,7 @@ const Navbar = () => {
               B
             </h1>
           </div>
-          <h1 className="lg:text-4xl text-xl font-semibold">
+          <h1 className="md:text-4xl text-xl font-semibold">
             Project Dashboard
           </h1>
         </div>
@@ -75,6 +49,7 @@ const Navbar = () => {
         <div id="right-section" className="flex items-center gap-4 md:gap-6">
           <div>
             {" "}
+            {/*When the window width is under 500px showIcon becomes true and search input is replaced with search icon */}
             {showIcon ? (
               <>
                 <SearchIcon onClick={() => setShowModal((prev) => !prev)} />
@@ -90,6 +65,7 @@ const Navbar = () => {
               </>
             )}
           </div>
+          {/*When search icon is clicked this modal will appear*/}
           <SearchModal
             showModal={showModal}
             showIcon={showIcon}
@@ -99,7 +75,7 @@ const Navbar = () => {
           <div className="flex gap-6 items-center">
             <div className=" hidden lg:flex relative  items-center gap-2 border-2 px-2 py-1 border-blue-300 rounded-md bg-blue-100">
               <div className="relative flex items-center justify-center">
-                {/* Loader element */}
+                {/* Loader Svg */}
                 <LoaderSvg />
 
                 <h3 className="text-sm z-10 absolute">4</h3>
