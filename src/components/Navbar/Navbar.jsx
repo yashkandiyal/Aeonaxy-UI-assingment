@@ -25,7 +25,7 @@ const Navbar = () => {
     };
   }, []);
   useEffect(() => {
-    width < 500 ? setShowIcon(true) : setShowIcon(false);
+    width < 768 ? setShowIcon(true) : setShowIcon(false);
   }, [width]);
 
   return (
@@ -37,7 +37,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center py-6 bg-white px-3 md:px-0">
         <div id="left-section" className="flex gap-6 items-center md:pl-4 mr-2">
           <div className="bg-black rounded-full flex items-center justify-center w-10 h-10  border-2 border-black">
-            <h1 className="text-base md:text-[1.55rem] font-black text-white">
+            <h1 className="text-[1.4rem] md:text-[1.55rem] font-black text-white">
               B
             </h1>
           </div>
@@ -46,7 +46,7 @@ const Navbar = () => {
           </h1>
         </div>
 
-        <div id="right-section" className="flex items-center gap-4 md:gap-6">
+        <div id="right-section" className="flex items-center gap-3 md:gap-6">
           <div>
             {" "}
             {/*When the window width is under 500px showIcon becomes true and search input is replaced with search icon */}

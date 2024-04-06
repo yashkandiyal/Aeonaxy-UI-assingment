@@ -40,11 +40,11 @@ const Modal = ({ show, setShow, toggleHandler, isToggled }) => {
               <div className="flex items-center gap-1 md:gap-2">
                 <button
                   onClick={toggleHandler}
-                  className={`relative w-8 h-4 rounded-full focus:outline-none border-black border-2 ${
+                  className={`relative w-7 h-4 rounded-full focus:outline-none border-black border-2 ${
                     isToggled ? "bg-black" : "bg-white"
                   }`}>
                   <span
-                    className={`absolute left-[0.13rem] bottom-[0.11rem] inline-block w-2 h-2 rounded-full transform transition-transform duration-300 ease-in-out ${
+                    className={`absolute left-[0.22rem] bottom-[0.11rem] inline-block w-2 h-2 rounded-full transform transition-transform duration-300 ease-in-out ${
                       isToggled ? "translate-x-full bg-white" : "bg-black"
                     }`}></span>
                 </button>
